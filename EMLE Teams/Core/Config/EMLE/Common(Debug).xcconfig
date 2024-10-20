@@ -1,0 +1,12 @@
+//
+//  Common(Debug).xcconfig
+//  EMLE Teams
+//
+//  Created by Mustafa Merza on 5/13/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = dev.emleplayer.com
+APP_SECRET = sjnw7js16jn29j7z
