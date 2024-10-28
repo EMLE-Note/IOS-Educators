@@ -13,6 +13,7 @@ protocol MoreCoordinating {
     func coordinateManageTeam()
     
     func goToEnrollment()
+    func coordinateTeamInvitations()
 }
 
 class MoreCoordinator: MainCoordinator, MoreCoordinating {
@@ -33,6 +34,11 @@ class MoreCoordinator: MainCoordinator, MoreCoordinating {
     }
     func coordinateManageTeam() {
         let coordinator = ManageTeamCoordinator(navigationController: navigationController, tabBarController: tabBarController)
+        coordinate(to: coordinator)
+    }
+    
+    func coordinateTeamInvitations() {
+        let coordinator = TeamInvitationsCoordinator(navigationController: navigationController)
         coordinate(to: coordinator)
     }
     

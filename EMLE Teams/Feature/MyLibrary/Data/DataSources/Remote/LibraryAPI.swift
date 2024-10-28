@@ -25,6 +25,8 @@ protocol LibraryAPIProtocol: APIProtocol {
     func getGroup(request: GetGroupRequest) throws -> APIDataPublisher
     func deleteGroup(request: DeleteGroupResquest) throws -> APIDataPublisher
     func uploadVideo(request: UploadVideoRequest) throws -> APIDataPublisher
+    func editMateril(request: EditMatrailRequest) throws -> APIDataPublisher
+    func copyMateril(request: CopyMaterilRequest) throws -> APIDataPublisher
 }
 
 class LibraryAPI: LibraryAPIProtocol {
@@ -108,6 +110,14 @@ class LibraryAPI: LibraryAPIProtocol {
     }
     
     func uploadVideo(request: UploadVideoRequest) throws -> APIDataPublisher {
+        return try sendTeamAuthorizedAPICall(request: request)
+    }
+    
+    func editMateril(request: EditMatrailRequest) throws -> APIDataPublisher {
+        return try sendTeamAuthorizedAPICall(request: request)
+    }
+    
+    func copyMateril(request: CopyMaterilRequest) throws -> APIDataPublisher {
         return try sendTeamAuthorizedAPICall(request: request)
     }
 }

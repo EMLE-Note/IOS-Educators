@@ -21,6 +21,7 @@ typealias GroupPublisher = DomainPublisher<GroupResponse>
 typealias GetGroupPublisher = DomainPublisher<[GroupCourse]>
 typealias DeleteGroupPublisher = DomainPublisher<DeleteGroupResponse>
 typealias UploadVideoPublisher = DomainPublisher<UploadVideoResponse>
+typealias EditMaterilPublisher = DomainPublisher<FolderMaterial>
 
 class LibraryRepository: LibraryRepositoryProtocol {
  
@@ -138,6 +139,20 @@ class LibraryRepository: LibraryRepositoryProtocol {
     func uploadVideo(body: UploadVideo) throws -> UploadVideoPublisher {
         try dataSource.uploadVideo(body: body)
             .tryMap { $0.toDomainWrapper(with: try $0.data?.toDomain()) }
+            .mapError()
+            .eraseToAnyPublisher()
+    }
+    
+    func editMateril(body: EditMatrail) throws -> EditMaterilPublisher {
+        try dataSource.editMateril(body: body)
+            .tryMap { $0.toDomainWrapper(with: try $0.data?.toDomain())}
+            .mapError()
+            .eraseToAnyPublisher()
+    }
+    
+    func copyMateril(body: CopyMaterial) throws -> EditMaterilPublisher {
+        try dataSource.copyMateril(body: body)
+            .tryMap { $0.toDomainWrapper(with: try $0.data?.toDomain())}
             .mapError()
             .eraseToAnyPublisher()
     }

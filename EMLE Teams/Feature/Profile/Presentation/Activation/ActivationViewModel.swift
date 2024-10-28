@@ -55,31 +55,25 @@ extension ActivationViewModel {
     func approveAllTapped() {
         if selectedActivationIds.isEmpty {
             let allActivationIds = activationData.map { $0.activationID }
-            print("All Activation IDs: \(allActivationIds)")
             acceptAllActivation(activationID: allActivationIds)
         } else {
-            print("Selected Activation IDs: \(selectedActivationIds)")
             acceptAllActivation(activationID: Array(selectedActivationIds))
         }
     }
     
     func approveTapped(at index: Int) {
         guard index >= 0 && index < activationData.count else {
-            print("Invalid index: \(index)")
             return
         }
         let activationId = activationData[index].activationID
-        print("Approved Activation ID: \(activationId)")
         acceptActivation(activationID: activationId)
     }
     
     func rejectTapped(at index: Int) {
         guard index >= 0 && index < activationData.count else {
-            print("Invalid index: \(index)")
             return
         }
         let activationId = activationData[index].activationID
-        print("Rejected Activation ID: \(activationId)")
         rejectActivation(activationID: activationId)
     }
     

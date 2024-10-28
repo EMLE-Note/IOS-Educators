@@ -12,6 +12,61 @@
         }
       }
     },
+    "activaionRequest" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activation Request"
+          }
+        }
+      }
+    },
+    "activateNewLearner" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activate New Learner"
+          }
+        }
+      }
+    },
+    "activation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activation"
+          }
+        }
+      }
+    },
+    "approve" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Approve"
+          }
+        }
+      }
+    },
+    "approveAll" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Approve all"
+          }
+        }
+      }
+    },
     "are_you_sure_you_want_to_logout" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -19,6 +74,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Are you sure you want to logout?"
+          }
+        }
+      }
+    },
+    "cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
           }
         }
       }
@@ -45,6 +111,17 @@
         }
       }
     },
+    "decline" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decline"
+          }
+        }
+      }
+    },
     "edit_profile" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -63,6 +140,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enrollment"
+          }
+        }
+      }
+    },
+    "enterSpecialPrice" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the special price"
           }
         }
       }
@@ -89,6 +177,94 @@
         }
       }
     },
+    "materialName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Material name"
+          }
+        }
+      }
+    },
+    "MaterialType" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Material type"
+          }
+        }
+      }
+    },
+    "mobileNumber" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mobile number"
+          }
+        }
+      }
+    },
+    "name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "notFoundUser" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Found User"
+          }
+        }
+      }
+    },
+    "paidAmount" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paid amount"
+          }
+        }
+      }
+    },
+    "registrationId" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registration Id"
+          }
+        }
+      }
+    },
+    "ressons" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reasons (Optional)"
+          }
+        }
+      }
+    },
     "save_changes" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -96,6 +272,39 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Save Changes"
+          }
+        }
+      }
+    },
+    "select" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select"
+          }
+        }
+      }
+    },
+    "selectAll" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select All"
+          }
+        }
+      }
+    },
+    "selectCourseActivation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the courses that you want to activate!"
           }
         }
       }
@@ -118,6 +327,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share App"
+          }
+        }
+      }
+    },
+    "team_invitation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Team Invitation"
+          }
+        }
+      }
+    },
+    "useSpecialPrice" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use special price course"
+          }
+        }
+      }
+    },
+    "whenLearnersSendActivityRequest" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When learners send activation requests they will appear here"
+          }
+        }
+      }
+    },
+    "youDonotHaveAnyRequest" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You don’t have any requests"
           }
         }
       }

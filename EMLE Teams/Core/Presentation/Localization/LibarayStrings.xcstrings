@@ -309,6 +309,28 @@
         }
       }
     },
+    "copyLesson" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Lesson"
+          }
+        }
+      }
+    },
+    "copyTheLessonAntherCourse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "copy the lesson to another course"
+          }
+        }
+      }
+    },
     "course" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -595,6 +617,17 @@
         }
       }
     },
+    "deleteLesson" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Lesson"
+          }
+        }
+      }
+    },
     "deleteQBankPermanently" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -602,6 +635,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete the Quiz Permanently"
+          }
+        }
+      }
+    },
+    "deleteYouLessonFile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete you lesson file from the course"
           }
         }
       }
@@ -635,6 +679,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doesn't have expiration date"
+          }
+        }
+      }
+    },
+    "downloadMaterial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download Material"
           }
         }
       }
@@ -738,6 +793,17 @@
         }
       }
     },
+    "editMaterial" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Material"
+          }
+        }
+      }
+    },
     "editQuestionBank" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -789,6 +855,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enable Trial"
+          }
+        }
+      }
+    },
+    "encouageLearners" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encouage learners to buy you course"
           }
         }
       }
@@ -1042,6 +1119,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hide the folder from the course"
+          }
+        }
+      }
+    },
+    "hideLesson" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide Lesson"
+          }
+        }
+      }
+    },
+    "hidenTheLessonCourse" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiden the lesson from the course"
           }
         }
       }
@@ -1680,6 +1779,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Select Video"
+          }
+        }
+      }
+    },
+    "setasFree" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set as free Material"
           }
         }
       }

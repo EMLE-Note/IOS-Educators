@@ -13,6 +13,18 @@ extension UploadVideo {
     }
 }
 
+extension EditMatrail {
+    func toRequest() -> EditMatrailRequest {
+        return EditMatrailRequest(editMatrail: self)
+    }
+}
+
+extension CopyMaterial {
+    func toRequest() -> CopyMaterilRequest {
+        return CopyMaterilRequest(copyMaterial: self)
+    }
+}
+
 
 extension UploadVideo {
     func toRequestDTO() -> UploadVideoDTO {

@@ -86,6 +86,7 @@ extension Image {
     static let note = Image("note-ic")
     static let shareApp = Image("share-app-ic")
     static let userEdit = Image("user-edit-ic")
+    static let teamInvitation = Image("team-invitation-ic")
     static let chevronRight = Image(systemName: "chevron.right")
     static let logout = Image("logout-ic")
     static let x = Image("x-ic")
@@ -144,6 +145,9 @@ extension Image {
     static let googleDrive = Image("google_drive")
     static let enrollmentIcon = Image("enrollment")
     static let activationEmpty = Image("activation-empty")
+    static let freeMaterial = Image("free_material")
+    static let pasteIcon = Image("paste_ic")
+    static let copyIcon = Image("copy_ic")
 }
 
 

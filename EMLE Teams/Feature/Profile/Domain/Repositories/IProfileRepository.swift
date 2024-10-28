@@ -22,4 +22,6 @@ protocol IProfileRepository: RepositoryProtocol {
     func createEnrollmentQBank(parms: EnrollmentCourse) throws -> EnrollmentManualPublisher
     func createEnrollmentEBook(parms: EnrollmentCourse) throws -> EnrollmentManualPublisher
     func createEnrollmentMassCourse(parms: EnrollmentCourseParameter) throws -> EnrollmentManualPublisher
+    func getInvitationsListData() throws -> InvitationListPublisher
+    func invitationAction(invitationID: Int, params: InvitationActionParameters) throws -> InvitationActionPublisher
 }

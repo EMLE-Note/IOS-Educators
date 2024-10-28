@@ -41,13 +41,13 @@ struct ActivationView: View {
 extension ActivationView {
     private var navigationBar: some View {
         HStack {
-            CustomNavigationBar.Checkout(title: "Activation")
+            CustomNavigationBar.Checkout(title: MoreStrings.activation.localized)
                 .padding(.bottom, .xSm)
                 .padding(.horizontal, defaultHPadding)
             
             Spacer()
             
-            OutlinedButton(title: "Approve all", action: {
+            OutlinedButton(title: MoreStrings.approveAll.localized, action: {
                 viewModel.approveAllTapped()
             }, height: 30, cornerRadius: 15)
             .padding(.sm)
@@ -59,7 +59,7 @@ extension ActivationView {
 
 extension ActivationView {
     private var activationLearnerButton: some View {
-        PrimaryButton(title: "Activate New Learner", action: {
+        PrimaryButton(title: MoreStrings.activateNewLearner.localized, action: {
             viewModel.activateNewLearnerTapped()
         })
         .clipShape(Capsule())
@@ -73,7 +73,7 @@ extension ActivationView {
 extension ActivationView {
     private var activationRequestText: some View {
         VStack(alignment: .leading) {
-            Text("Activation Request")
+            Text(MoreStrings.activaionRequest.localized)
                 .customStyle(.headline, .onSurface)
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -88,8 +88,8 @@ extension ActivationView {
         ListView(
             dataArray: viewModel.activationData,
             noDataImage: Image.activationEmpty,
-            noDataMessage: "You don’t have any requests ",
-            noDataSubMessage: "When learners send activation requests they will appear here"
+            noDataMessage: MoreStrings.youDonotHaveAnyRequest.localized,
+            noDataSubMessage: MoreStrings.whenLearnersSendActivityRequest.localized
         ) {
             NoIndicatorsScrollView {
                 ForEach(viewModel.activationData.indices, id: \.self) { index in
@@ -130,19 +130,19 @@ extension ActivationView {
                 ), title: "")
             }
             
-            detailsView(title: "Registration Id", value: "\(activationData.registrationID)")
-            detailsView(title: "Mobile number", value: activationData.student.mobile)
-            detailsView(title: "Name", value: activationData.registrationName)
-            detailsView(title: "Material type", value: activationData.type)
-            detailsView(title: "Material name", value: activationData.requestable.name)
-            detailsView(title: "Paid amount", value: "\(activationData.paidAmount)")
+            detailsView(title: MoreStrings.registrationId.localized, value: "\(activationData.registrationID)")
+            detailsView(title: MoreStrings.mobileNumber.localized, value: activationData.student.mobile)
+            detailsView(title: MoreStrings.name.localized, value: activationData.registrationName)
+            detailsView(title: MoreStrings.MaterialType.localized, value: activationData.type)
+            detailsView(title: MoreStrings.materialName.localized, value: activationData.requestable.name)
+            detailsView(title: MoreStrings.paidAmount.localized, value: "\(activationData.paidAmount)")
             
             buttons(index: index)
         }
         .frame(maxWidth: .infinity)
         .padding()
         .withShimmerOverlay()
-        .customBackground(viewModel.isSelected(index: index) ? .primaryOpacity(opacity: 5.0) : .onPrimary)
+        .customBackground(viewModel.isSelected(index: index) ? .primaryOpacity(opacity: 0.7) : .onPrimary)
         .withCardShadow(backgroundColor: .onSurface, cornerRadius: .sm)
     }
 
@@ -161,12 +161,12 @@ extension ActivationView {
     
     private func buttons(index: Int) -> some View {
         HStack {
-            OutlinedButton(title: "Decline", action: {
+            OutlinedButton(title: MoreStrings.decline.localized, action: {
                 viewModel.rejectTapped(at: index)
             }, height: 30, cornerRadius: 15)
             .frame(maxWidth: 110)
             
-            PrimaryButton(title: "Approve", action: {
+            PrimaryButton(title: MoreStrings.approve.localized, action: {
                 viewModel.approveTapped(at: index)
             }, height: 30)
             .withCardShadow()

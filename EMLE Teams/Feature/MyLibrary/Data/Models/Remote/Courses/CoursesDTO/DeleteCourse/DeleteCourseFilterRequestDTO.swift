@@ -7,7 +7,6 @@
 
 import Foundation
 import EMLECore
-import Alamofire
 
 struct DeleteCourseFilterRequestDTO: Codable {
     var parameters: Parameters {

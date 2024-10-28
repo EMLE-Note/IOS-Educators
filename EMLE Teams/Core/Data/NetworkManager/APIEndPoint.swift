@@ -47,9 +47,12 @@ extension APIEndPoint {
     static let enrollmentEBook = APIEndPoint("/team/team/enrollments/manual/ebooks")
     static let enrollmentMass = APIEndPoint("/team/team/enrollments/manual/mass-courses")
     
+    
     // team
     static let createTeam = APIEndPoint("/team/team/new")
     static let getMyTeams = APIEndPoint("/team/my-teams")
+    static let teamInvitationsList = APIEndPoint("/team/invitations/list")
+    static let teamInvitationsAction = APIEndPoint("/team/invitations/%d/take_action")
 
     static let getCourses = APIEndPoint("/team/team/courses")
     static let getContent = APIEndPoint("/team/team/courses/%d")
@@ -70,5 +73,7 @@ extension APIEndPoint {
     static let updateQBank = APIEndPoint("/team/team/qbanks/%d")
     
     static let uploadVideo = APIEndPoint("/team/team/courses/course-materials/videos")
+    static let editMatrail = APIEndPoint("/team/team/courses/course-materials/%d")
+    static let copyMatrail = APIEndPoint("/team/team/courses/course-materials/%d/copy")
     
 }

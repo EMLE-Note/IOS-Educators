@@ -22,6 +22,7 @@ typealias GroupResponsePublisher = ResponsePublisher<GroupResponseDTO>
 typealias GetGroupResponsePublisher = ResponsePublisher<[GroupDTO]>
 typealias DeleteGroupResponsePublisher = ResponsePublisher<DeleteGroupResponseDTO>
 typealias UploadVideoResponsePublisher = ResponsePublisher<UploadVideoResponseDTO>
+typealias EditMaterilResponsePublisher = ResponsePublisher<MeterialDTO>
 
 protocol LibraryDataSourceProtocol: RemoteDataSourceProtocol {
     func getCourses(params: GetCourses) throws -> GetCoursesResponsePublisher
@@ -40,6 +41,8 @@ protocol LibraryDataSourceProtocol: RemoteDataSourceProtocol {
     func getGroup() throws -> GetGroupResponsePublisher
     func deleteGroup(groupId: Int) throws -> DeleteGroupResponsePublisher
     func uploadVideo(body: UploadVideo) throws -> UploadVideoResponsePublisher
+    func editMateril(body: EditMatrail) throws -> EditMaterilResponsePublisher
+    func copyMateril(body: CopyMaterial) throws -> EditMaterilResponsePublisher
 }
 
 class LibraryDataSource: LibraryDataSourceProtocol {
@@ -127,6 +130,16 @@ class LibraryDataSource: LibraryDataSourceProtocol {
     
     func uploadVideo(body: UploadVideo) throws -> UploadVideoResponsePublisher {
         try api.uploadVideo(request: body.toRequest())
+            .toResponsePublisher()
+    }
+    
+    func editMateril(body: EditMatrail) throws -> EditMaterilResponsePublisher {
+        try api.editMateril(request: body.toRequest())
+            .toResponsePublisher()
+    }
+    
+    func copyMateril(body: CopyMaterial) throws -> EditMaterilResponsePublisher {
+        try api.copyMateril(request: body.toRequest())
             .toResponsePublisher()
     }
 }

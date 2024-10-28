@@ -37,5 +37,7 @@ class ProfileDependencyManager {
         @Provide var createEnrollmentQBankUseCase = CreateEnrollmentQBankUseCase(repository: repository)
         @Provide var createEnrollmentEBookUseCase = CreateEnrollmentEBookUseCase(repository: repository)
         @Provide var createEnrollmentMassCourseUseCase = CreateEnrollmentMassCourseUseCase(repository: repository)
+        @Provide var getInvitationsListUseCase = GetInvitationsListUseCase(repository: repository)
+        @Provide var InvitationsActionUseCase = InvitationsActionUseCase(repository: repository)
     }
 }

@@ -12,6 +12,7 @@ import SwiftUI
 class MonitorStatusService {
     
     @Inject var monitorStatus: MonitorServerResponseService
+    @Inject var logoutUserUseCase: LogoutUserUseCase
     
     var cancellables: Set<AnyCancellable> = []
 
@@ -23,10 +24,8 @@ class MonitorStatusService {
     
     func handleResponse (_ response: MonitorServerServiceResponse) {
         if response.statusCode == .monitorUnavailable  {
-            
+            logoutUserUseCase.execute()
         }
-        
-        print("Status Code", response.statusCode)
     }
 }
 

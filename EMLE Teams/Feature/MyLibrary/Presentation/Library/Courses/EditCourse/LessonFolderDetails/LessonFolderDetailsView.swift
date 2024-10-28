@@ -29,7 +29,7 @@ struct LessonFolderDetailsView: View {
         }
         .overlay( fabMenu , alignment: .bottomTrailing )
         .customSheet(isPresented: $viewModel.isOptianFolderViewPresented,
-                     height: 150,
+                     height: 370,
                      detents: [.medium],
                      content: { getSheetView { optionalContentView() }
         })
@@ -69,22 +69,33 @@ extension LessonFolderDetailsView {
 extension LessonFolderDetailsView {
     private var navigationBar: some View {
         HStack {
-            CustomNavigationBar.Checkout(title: viewModel
-                .folder.name)
+            CustomNavigationBar.Checkout(title: viewModel.folder.name)
                 .padding(.bottom, .xSm)
                 .padding(.horizontal, defaultHPadding)
             
             Spacer()
             
-            Image.edit
-                .resizable()
-                .frame(width: 28, height: 28)
-                .padding(.bottom, .xSm)
-                .padding(.horizontal, .md)
-                .onTapGesture {
-                    viewModel.editCourseTapped()
+            Group {
+                if let _ = viewModel.defaultsManager.getMaterialId() {
+                    Image.pasteIcon
+                        .resizable()
+                        .frame(width: 28, height: 28)
+                        .padding(.bottom, .xSm)
+                        .padding(.horizontal, .md)
+                        .onTapGesture {
+                            viewModel.pastedMaterialTapped()
+                        }
+                } else {
+                    Image.edit
+                        .resizable()
+                        .frame(width: 28, height: 28)
+                        .padding(.bottom, .xSm)
+                        .padding(.horizontal, .md)
+                        .onTapGesture {
+                            viewModel.editCourseTapped()
+                        }
                 }
-            
+            }
         }
         .customBackground(.container)
     }
@@ -130,7 +141,7 @@ extension LessonFolderDetailsView {
         .customBackground(.container)
     }
     
-    private func optionView(for option: OptionType) -> some View {
+    private func optionView(for option: MaterialOptionType) -> some View {
         OptionView(
             icon: option.icon,
             title: option.title,

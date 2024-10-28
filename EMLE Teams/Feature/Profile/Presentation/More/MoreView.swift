@@ -30,9 +30,11 @@ struct MoreView: View {
                     editProfile
                     
                     enrollment
-                    
+                                        
                     manageTeam
                     
+                    teamInvitation
+
                     helpSupport
                     
                     sendFeedback
@@ -72,6 +74,12 @@ struct MoreView: View {
         NavigationButton(title: "Manage Team",
                          icon: .userEdit, action:
                             viewModel.onManageTeamClick)
+    }
+    
+    private var teamInvitation: some View {
+        NavigationButton(title: MoreStrings.teamInvitation.localized,
+                         icon: .teamInvitation, action:
+                            viewModel.onTeamInvitationsClick)
     }
     
     private var editProfile: some View {

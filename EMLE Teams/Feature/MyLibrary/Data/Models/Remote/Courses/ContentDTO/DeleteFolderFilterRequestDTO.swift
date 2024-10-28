@@ -7,7 +7,7 @@
 
 import Foundation
 import EMLECore
-import Alamofire
+
 
 struct DeleteFolderFilterRequestDTO: Codable {
     var parameters: Parameters {

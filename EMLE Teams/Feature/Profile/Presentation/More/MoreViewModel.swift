@@ -44,6 +44,10 @@ extension MoreViewModel {
         coordinator.coordinateManageTeam()
     }
     
+    func onTeamInvitationsClick() {
+        coordinator.coordinateTeamInvitations()
+    }
+    
     func onHelpAndSupportClick() {
         print("onHelpAndSupportClick")
     }

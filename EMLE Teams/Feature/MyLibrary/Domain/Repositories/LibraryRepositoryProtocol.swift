@@ -25,4 +25,6 @@ protocol LibraryRepositoryProtocol: RepositoryProtocol {
     func getGroup() throws -> GetGroupPublisher
     func deleteGroup(groupId: Int) throws -> DeleteGroupPublisher
     func uploadVideo(body: UploadVideo) throws -> UploadVideoPublisher
+    func editMateril(body: EditMatrail) throws -> EditMaterilPublisher
+    func copyMateril(body: CopyMaterial) throws -> EditMaterilPublisher
 }

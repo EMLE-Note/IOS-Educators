@@ -18,38 +18,6 @@
             endingLineNumber = "30"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "B7143B81-FABE-4DFE-AC2A-5703DD6CE6F1 - 97eaeac7c1d3b32c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMLE_Teams.PaymentView.body.getter : some"
-                  moduleName = "EMLE Teams"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iosayed/Desktop/EMLE-Teams-IOS/emleteams-ios/EMLE%20Teams/Core/Presentation/Payment/PaymentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "680">
-               </Location>
-               <Location
-                  uuid = "B7143B81-FABE-4DFE-AC2A-5703DD6CE6F1 - 97eaeac7c1d3b32c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMLE_Teams.PaymentView.body.getter : some"
-                  moduleName = "EMLE Teams"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iosayed/Desktop/EMLE-Teams-IOS/emleteams-ios/EMLE%20Teams/Core/Presentation/Payment/PaymentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "288">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

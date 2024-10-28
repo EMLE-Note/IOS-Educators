@@ -18,6 +18,8 @@ typealias AcceptActivationDataResponsePublisher = ResponsePublisher<AcceptActiva
 typealias RejectActivationDataResponsePublisher = ResponsePublisher<RejectActivationRequest>
 typealias SearchStaffDataResponsePublisher = ResponsePublisher<SearchStaffResponseDTO>
 typealias EnrollmentResponsePublisher = ResponsePublisher<EnrollmentResponseDTO>
+typealias InvitationsListDataResponsePublisher = ResponsePublisher<[InvitationDTO]>
+typealias InvitationActionDataResponsePublisher = ResponsePublisher<InvitationActionResponseDTO>
 
 protocol IProfileDataSource: RemoteDataSourceProtocol {
     func getProfileDate() throws -> ProfileDataResponsePublisher
@@ -33,6 +35,8 @@ protocol IProfileDataSource: RemoteDataSourceProtocol {
     func createEnrollmentQBank(params: EnrollmentCourse) throws -> EnrollmentResponsePublisher
     func createEnrollmentEBook(params: EnrollmentCourse) throws -> EnrollmentResponsePublisher
     func createEnrollmentMassCourse(params: EnrollmentCourseParameter) throws -> EnrollmentResponsePublisher
+    func getInvitationList() throws -> InvitationsListDataResponsePublisher
+    func invitationAction(invitationID: Int,params:InvitationActionParameters) throws -> InvitationActionDataResponsePublisher
 }
 
 class ProfileDataSource: IProfileDataSource {
@@ -107,4 +111,15 @@ class ProfileDataSource: IProfileDataSource {
         try api.createEnrollmentMassCourse(request: params.toRequest())
             .toResponsePublisher()
     }
+    
+    func getInvitationList() throws -> InvitationsListDataResponsePublisher {
+        try api.getInvitationsList(request: InvitationListRequest())
+            .toResponsePublisher()
+    }
+    
+    func invitationAction(invitationID: Int, params: InvitationActionParameters) throws -> InvitationActionDataResponsePublisher {
+        try api.invitationAction(invitationID: invitationID, params: params)
+            .toResponsePublisher()
+    }
+    
 }

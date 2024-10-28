@@ -119,6 +119,23 @@
 		C89A77682C576AD000970121 /* FiltersOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A77672C576AD000970121 /* FiltersOptions.swift */; };
 		C89A776A2C5773D400970121 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89A77692C5773D400970121 /* ScreenType.swift */; };
 		C8AA44B12C242D6C00A7169C /* CustomBarProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA44B02C242D6C00A7169C /* CustomBarProgressView.swift */; };
+		C8AAEFA02CCEBE1F00BE552E /* TeamInvitationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEF9F2CCEBE1F00BE552E /* TeamInvitationsView.swift */; };
+		C8AAEFA22CCEBE7400BE552E /* TeamInvitationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFA12CCEBE7400BE552E /* TeamInvitationsViewModel.swift */; };
+		C8AAEFA42CCEC01200BE552E /* TeamInvitationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFA32CCEC01200BE552E /* TeamInvitationsCoordinator.swift */; };
+		C8AAEFA72CCED03A00BE552E /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFA62CCED03A00BE552E /* Invitation.swift */; };
+		C8AAEFAA2CCED0E900BE552E /* InvitationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFA92CCED0E900BE552E /* InvitationDTO.swift */; };
+		C8AAEFAC2CCED14300BE552E /* InvitationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFAB2CCED14300BE552E /* InvitationMapper.swift */; };
+		C8AAEFAE2CCED20C00BE552E /* InvitationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFAD2CCED20C00BE552E /* InvitationRequest.swift */; };
+		C8AAEFB12CCED3A600BE552E /* ActivationNewLearnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFAF2CCED3A500BE552E /* ActivationNewLearnerView.swift */; };
+		C8AAEFB22CCED3A600BE552E /* ActivationNewLearnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFB02CCED3A500BE552E /* ActivationNewLearnerViewModel.swift */; };
+		C8AAEFB42CCED5B800BE552E /* InvitationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFB32CCED5B800BE552E /* InvitationsUseCase.swift */; };
+		C8AAEFB62CCEDEF800BE552E /* InvitationActionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFB52CCEDEF800BE552E /* InvitationActionResponse.swift */; };
+		C8AAEFB82CCEDF3500BE552E /* InvitationActionResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFB72CCEDF3500BE552E /* InvitationActionResponseDTO.swift */; };
+		C8AAEFBA2CCEDFA100BE552E /* InvitationActionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFB92CCEDFA100BE552E /* InvitationActionRequest.swift */; };
+		C8AAEFBC2CCEE11900BE552E /* InvitationActionParametersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFBB2CCEE11900BE552E /* InvitationActionParametersDTO.swift */; };
+		C8AAEFBE2CCEE26D00BE552E /* InvitationActionParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFBD2CCEE26D00BE552E /* InvitationActionParameters.swift */; };
+		C8AAEFC02CCEE59200BE552E /* InvitationsActionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFBF2CCEE59200BE552E /* InvitationsActionUseCase.swift */; };
+		C8AAEFC22CCEE71000BE552E /* InvitationActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAEFC12CCEE71000BE552E /* InvitationActionType.swift */; };
 		C8B2588D2C6317D400A677ED /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B2588C2C6317D400A677ED /* FullScreenImageView.swift */; };
 		C8B258902C631C6900A677ED /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B2588F2C631C6900A677ED /* BlurView.swift */; };
 		C8B258922C63462200A677ED /* EnrollmentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B258912C63462200A677ED /* EnrollmentCoordinator.swift */; };
@@ -401,6 +418,15 @@
 		F81672AA2CC14DB8005624A8 /* CreateEnrollmentQBankUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81672A92CC14DB8005624A8 /* CreateEnrollmentQBankUseCase.swift */; };
 		F81672AC2CC14DD6005624A8 /* CreateEnrollmentEBookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81672AB2CC14DD6005624A8 /* CreateEnrollmentEBookUseCase.swift */; };
 		F81672AE2CC50B09005624A8 /* ContentDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81672AD2CC50B09005624A8 /* ContentDialogView.swift */; };
+		F82AF0252CC8ED4E00A07459 /* MaterialOptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF0242CC8ED4E00A07459 /* MaterialOptionType.swift */; };
+		F82AF0282CC90B6B00A07459 /* EditMatrailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF0272CC90B6B00A07459 /* EditMatrailRequest.swift */; };
+		F82AF02A2CC90BD100A07459 /* EditMatrailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF0292CC90BD100A07459 /* EditMatrailDTO.swift */; };
+		F82AF02C2CC90C4B00A07459 /* EditMatrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF02B2CC90C4B00A07459 /* EditMatrial.swift */; };
+		F82AF02E2CC9119600A07459 /* EditMaterilUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF02D2CC9119600A07459 /* EditMaterilUseCase.swift */; };
+		F82AF0302CC91BB700A07459 /* CopyMaterilRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF02F2CC91BB700A07459 /* CopyMaterilRequest.swift */; };
+		F82AF0322CC91C0600A07459 /* CopyMaterailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF0312CC91C0600A07459 /* CopyMaterailDTO.swift */; };
+		F82AF0342CC91C5D00A07459 /* CopyMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF0332CC91C5D00A07459 /* CopyMaterial.swift */; };
+		F82AF0362CC91EBA00A07459 /* CopyMaterilUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82AF0352CC91EBA00A07459 /* CopyMaterilUseCase.swift */; };
 		F834988F2CC53C2300914E78 /* EnrollmentCourseGroupManualRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834988E2CC53C2300914E78 /* EnrollmentCourseGroupManualRequest.swift */; };
 		F83498912CC53C6E00914E78 /* EnrollmentCourseGroupDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83498902CC53C6E00914E78 /* EnrollmentCourseGroupDTO.swift */; };
 		F83498932CC53CB500914E78 /* EnrollmentMassCourseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83498922CC53CB500914E78 /* EnrollmentMassCourseDTO.swift */; };
@@ -413,6 +439,7 @@
 		F88B654B2CBD2E7A002F92A4 /* SearchStaffRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B654A2CBD2E7A002F92A4 /* SearchStaffRequest.swift */; };
 		F88B654D2CBD2EF6002F92A4 /* SearchStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B654C2CBD2EF6002F92A4 /* SearchStaff.swift */; };
 		F88B654F2CBD30E8002F92A4 /* SearchStaffUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B654E2CBD30E8002F92A4 /* SearchStaffUseCase.swift */; };
+		F893BF382CCE61E100A660F8 /* UserDefaultsManager+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F893BF372CCE61E100A660F8 /* UserDefaultsManager+Extenions.swift */; };
 		F8B603F12CBF9C5A00DA164D /* SearchStaffParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B603F02CBF9C5600DA164D /* SearchStaffParameter.swift */; };
 		F90123B82CB1DAC4009F14DE /* UploadVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90123B72CB1DAC4009F14DE /* UploadVideo.swift */; };
 		F90123BA2CB1DB94009F14DE /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90123B92CB1DB94009F14DE /* Video.swift */; };
@@ -456,8 +483,6 @@
 		F94C24422CBBB8140005441C /* AcceptActivationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C24412CBBB8140005441C /* AcceptActivationUseCase.swift */; };
 		F94C24442CBBB8260005441C /* RejectActivationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C24432CBBB8260005441C /* RejectActivationUseCase.swift */; };
 		F94C24482CBC26C90005441C /* ActivationMaterialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C24472CBC26C90005441C /* ActivationMaterialType.swift */; };
-		F94C244B2CBC37DA0005441C /* ActivationNewLearnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C244A2CBC37DA0005441C /* ActivationNewLearnerViewModel.swift */; };
-		F94C244D2CBC37E40005441C /* ActivationNewLearnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C244C2CBC37E40005441C /* ActivationNewLearnerView.swift */; };
 		F94C244F2CBC384D0005441C /* ActivationNewLearnerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C244E2CBC384D0005441C /* ActivationNewLearnerCoordinator.swift */; };
 		F94C24512CBC6C240005441C /* AcceptAllActivationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C24502CBC6C240005441C /* AcceptAllActivationRequest.swift */; };
 		F94C24532CBC6CE40005441C /* ActivationAllDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C24522CBC6CE40005441C /* ActivationAllDTO.swift */; };
@@ -834,6 +859,23 @@
 		C89A77672C576AD000970121 /* FiltersOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersOptions.swift; sourceTree = "<group>"; };
 		C89A77692C5773D400970121 /* ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
 		C8AA44B02C242D6C00A7169C /* CustomBarProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarProgressView.swift; sourceTree = "<group>"; };
+		C8AAEF9F2CCEBE1F00BE552E /* TeamInvitationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInvitationsView.swift; sourceTree = "<group>"; };
+		C8AAEFA12CCEBE7400BE552E /* TeamInvitationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInvitationsViewModel.swift; sourceTree = "<group>"; };
+		C8AAEFA32CCEC01200BE552E /* TeamInvitationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInvitationsCoordinator.swift; sourceTree = "<group>"; };
+		C8AAEFA62CCED03A00BE552E /* Invitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
+		C8AAEFA92CCED0E900BE552E /* InvitationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationDTO.swift; sourceTree = "<group>"; };
+		C8AAEFAB2CCED14300BE552E /* InvitationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationMapper.swift; sourceTree = "<group>"; };
+		C8AAEFAD2CCED20C00BE552E /* InvitationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationRequest.swift; sourceTree = "<group>"; };
+		C8AAEFAF2CCED3A500BE552E /* ActivationNewLearnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationNewLearnerView.swift; sourceTree = "<group>"; };
+		C8AAEFB02CCED3A500BE552E /* ActivationNewLearnerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationNewLearnerViewModel.swift; sourceTree = "<group>"; };
+		C8AAEFB32CCED5B800BE552E /* InvitationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsUseCase.swift; sourceTree = "<group>"; };
+		C8AAEFB52CCEDEF800BE552E /* InvitationActionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationActionResponse.swift; sourceTree = "<group>"; };
+		C8AAEFB72CCEDF3500BE552E /* InvitationActionResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationActionResponseDTO.swift; sourceTree = "<group>"; };
+		C8AAEFB92CCEDFA100BE552E /* InvitationActionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationActionRequest.swift; sourceTree = "<group>"; };
+		C8AAEFBB2CCEE11900BE552E /* InvitationActionParametersDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationActionParametersDTO.swift; sourceTree = "<group>"; };
+		C8AAEFBD2CCEE26D00BE552E /* InvitationActionParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationActionParameters.swift; sourceTree = "<group>"; };
+		C8AAEFBF2CCEE59200BE552E /* InvitationsActionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationsActionUseCase.swift; sourceTree = "<group>"; };
+		C8AAEFC12CCEE71000BE552E /* InvitationActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationActionType.swift; sourceTree = "<group>"; };
 		C8B2588C2C6317D400A677ED /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
 		C8B2588F2C631C6900A677ED /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		C8B258912C63462200A677ED /* EnrollmentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCoordinator.swift; sourceTree = "<group>"; };
@@ -1116,6 +1158,15 @@
 		F81672A92CC14DB8005624A8 /* CreateEnrollmentQBankUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEnrollmentQBankUseCase.swift; sourceTree = "<group>"; };
 		F81672AB2CC14DD6005624A8 /* CreateEnrollmentEBookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEnrollmentEBookUseCase.swift; sourceTree = "<group>"; };
 		F81672AD2CC50B09005624A8 /* ContentDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDialogView.swift; sourceTree = "<group>"; };
+		F82AF0242CC8ED4E00A07459 /* MaterialOptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialOptionType.swift; sourceTree = "<group>"; };
+		F82AF0272CC90B6B00A07459 /* EditMatrailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatrailRequest.swift; sourceTree = "<group>"; };
+		F82AF0292CC90BD100A07459 /* EditMatrailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatrailDTO.swift; sourceTree = "<group>"; };
+		F82AF02B2CC90C4B00A07459 /* EditMatrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatrial.swift; sourceTree = "<group>"; };
+		F82AF02D2CC9119600A07459 /* EditMaterilUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMaterilUseCase.swift; sourceTree = "<group>"; };
+		F82AF02F2CC91BB700A07459 /* CopyMaterilRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMaterilRequest.swift; sourceTree = "<group>"; };
+		F82AF0312CC91C0600A07459 /* CopyMaterailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMaterailDTO.swift; sourceTree = "<group>"; };
+		F82AF0332CC91C5D00A07459 /* CopyMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMaterial.swift; sourceTree = "<group>"; };
+		F82AF0352CC91EBA00A07459 /* CopyMaterilUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyMaterilUseCase.swift; sourceTree = "<group>"; };
 		F834988E2CC53C2300914E78 /* EnrollmentCourseGroupManualRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCourseGroupManualRequest.swift; sourceTree = "<group>"; };
 		F83498902CC53C6E00914E78 /* EnrollmentCourseGroupDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentCourseGroupDTO.swift; sourceTree = "<group>"; };
 		F83498922CC53CB500914E78 /* EnrollmentMassCourseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentMassCourseDTO.swift; sourceTree = "<group>"; };
@@ -1128,6 +1179,7 @@
 		F88B654A2CBD2E7A002F92A4 /* SearchStaffRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStaffRequest.swift; sourceTree = "<group>"; };
 		F88B654C2CBD2EF6002F92A4 /* SearchStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStaff.swift; sourceTree = "<group>"; };
 		F88B654E2CBD30E8002F92A4 /* SearchStaffUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStaffUseCase.swift; sourceTree = "<group>"; };
+		F893BF372CCE61E100A660F8 /* UserDefaultsManager+Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaultsManager+Extenions.swift"; sourceTree = "<group>"; };
 		F8B603F02CBF9C5600DA164D /* SearchStaffParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStaffParameter.swift; sourceTree = "<group>"; };
 		F90123B72CB1DAC4009F14DE /* UploadVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideo.swift; sourceTree = "<group>"; };
 		F90123B92CB1DB94009F14DE /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -1171,8 +1223,6 @@
 		F94C24412CBBB8140005441C /* AcceptActivationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptActivationUseCase.swift; sourceTree = "<group>"; };
 		F94C24432CBBB8260005441C /* RejectActivationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectActivationUseCase.swift; sourceTree = "<group>"; };
 		F94C24472CBC26C90005441C /* ActivationMaterialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationMaterialType.swift; sourceTree = "<group>"; };
-		F94C244A2CBC37DA0005441C /* ActivationNewLearnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationNewLearnerViewModel.swift; sourceTree = "<group>"; };
-		F94C244C2CBC37E40005441C /* ActivationNewLearnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationNewLearnerView.swift; sourceTree = "<group>"; };
 		F94C244E2CBC384D0005441C /* ActivationNewLearnerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationNewLearnerCoordinator.swift; sourceTree = "<group>"; };
 		F94C24502CBC6C240005441C /* AcceptAllActivationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptAllActivationRequest.swift; sourceTree = "<group>"; };
 		F94C24522CBC6CE40005441C /* ActivationAllDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivationAllDTO.swift; sourceTree = "<group>"; };
@@ -2056,6 +2106,38 @@
 			path = Remote;
 			sourceTree = "<group>";
 		};
+		C8AAEF9E2CCEBDAB00BE552E /* TeamInvitations */ = {
+			isa = PBXGroup;
+			children = (
+				C8AAEF9F2CCEBE1F00BE552E /* TeamInvitationsView.swift */,
+				C8AAEFA12CCEBE7400BE552E /* TeamInvitationsViewModel.swift */,
+			);
+			path = TeamInvitations;
+			sourceTree = "<group>";
+		};
+		C8AAEFA52CCED02300BE552E /* TeamInvitation */ = {
+			isa = PBXGroup;
+			children = (
+				C8AAEFA62CCED03A00BE552E /* Invitation.swift */,
+				C8AAEFB52CCEDEF800BE552E /* InvitationActionResponse.swift */,
+				C8AAEFBD2CCEE26D00BE552E /* InvitationActionParameters.swift */,
+				C8AAEFC12CCEE71000BE552E /* InvitationActionType.swift */,
+			);
+			path = TeamInvitation;
+			sourceTree = "<group>";
+		};
+		C8AAEFA82CCED0B400BE552E /* TeamInvitation */ = {
+			isa = PBXGroup;
+			children = (
+				C8AAEFA92CCED0E900BE552E /* InvitationDTO.swift */,
+				C8AAEFAD2CCED20C00BE552E /* InvitationRequest.swift */,
+				C8AAEFB72CCEDF3500BE552E /* InvitationActionResponseDTO.swift */,
+				C8AAEFB92CCEDFA100BE552E /* InvitationActionRequest.swift */,
+				C8AAEFBB2CCEE11900BE552E /* InvitationActionParametersDTO.swift */,
+			);
+			path = TeamInvitation;
+			sourceTree = "<group>";
+		};
 		C8B2588E2C631C4500A677ED /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -2123,6 +2205,7 @@
 				F93A19F32C79B52200799239 /* Date */,
 				C8BA320A2C1493E400A9B3D3 /* view */,
 				C8BA32172C14942A00A9B3D3 /* Image+Images.swift */,
+				F893BF372CCE61E100A660F8 /* UserDefaultsManager+Extenions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2783,6 +2866,7 @@
 		C8ECA9122C70898B0053A4CD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C8AAEF9E2CCEBDAB00BE552E /* TeamInvitations */,
 				F94C24492CBC37BE0005441C /* ActivationNewLearner */,
 				F9813B742CB96EAD001D6A81 /* Activation */,
 				C8DD36842C96C23F004708DC /* ManageTeam */,
@@ -2852,6 +2936,7 @@
 		C8ECA9192C7089CD0053A4CD /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				C8AAEFA82CCED0B400BE552E /* TeamInvitation */,
 				F9F235DD2CBB10BA00BBE3A8 /* Activation */,
 				C8ECA9272C708A770053A4CD /* EditProfileRequest.swift */,
 				C8ECA9252C708A770053A4CD /* EditProfileResponseDTO.swift */,
@@ -2878,6 +2963,7 @@
 				C87BA11A2C8C864200DA1B33 /* TeamPermissionMapper.swift */,
 				C8D473752C9DC5BF00265626 /* MemberMapper.swift */,
 				F9F235E42CBB128900BBE3A8 /* ActivationMapper.swift */,
+				C8AAEFAB2CCED14300BE552E /* InvitationMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -2907,6 +2993,8 @@
 				F81672A92CC14DB8005624A8 /* CreateEnrollmentQBankUseCase.swift */,
 				F81672AB2CC14DD6005624A8 /* CreateEnrollmentEBookUseCase.swift */,
 				F83498982CC5453C00914E78 /* CreateEnrollmentMassCourseUseCase.swift */,
+				C8AAEFB32CCED5B800BE552E /* InvitationsUseCase.swift */,
+				C8AAEFBF2CCEE59200BE552E /* InvitationsActionUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -2922,6 +3010,7 @@
 		C8ECA91F2C708A450053A4CD /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				C8AAEFA52CCED02300BE552E /* TeamInvitation */,
 				F9F235D62CBB0FF800BBE3A8 /* Activation */,
 				C8D4736E2C9DC2EA00265626 /* Profile */,
 				C87BA10B2C8C830F00DA1B33 /* TeamPermissions */,
@@ -2995,6 +3084,7 @@
 				C8DD368A2C96C787004708DC /* ManageTeamCoordinator.swift */,
 				F9813B792CB9705B001D6A81 /* ActivationCoordinator.swift */,
 				F94C244E2CBC384D0005441C /* ActivationNewLearnerCoordinator.swift */,
+				C8AAEFA32CCEC01200BE552E /* TeamInvitationsCoordinator.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -3142,12 +3232,25 @@
 			path = EnrollmentsManual;
 			sourceTree = "<group>";
 		};
+		F82AF0262CC90B3000A07459 /* UpdateMatrail */ = {
+			isa = PBXGroup;
+			children = (
+				F82AF0272CC90B6B00A07459 /* EditMatrailRequest.swift */,
+				F82AF0292CC90BD100A07459 /* EditMatrailDTO.swift */,
+				F82AF02F2CC91BB700A07459 /* CopyMaterilRequest.swift */,
+				F82AF0312CC91C0600A07459 /* CopyMaterailDTO.swift */,
+			);
+			path = UpdateMatrail;
+			sourceTree = "<group>";
+		};
 		F90123B62CB1D892009F14DE /* UploadMaterial */ = {
 			isa = PBXGroup;
 			children = (
 				F90123B72CB1DAC4009F14DE /* UploadVideo.swift */,
 				F90123B92CB1DB94009F14DE /* Video.swift */,
 				F9BC9F912CB31A40004D2D14 /* UploadVideoResponse.swift */,
+				F82AF02B2CC90C4B00A07459 /* EditMatrial.swift */,
+				F82AF0332CC91C5D00A07459 /* CopyMaterial.swift */,
 			);
 			path = UploadMaterial;
 			sourceTree = "<group>";
@@ -3155,6 +3258,7 @@
 		F90123BB2CB1DCEC009F14DE /* UploadMaterialDTO */ = {
 			isa = PBXGroup;
 			children = (
+				F82AF0262CC90B3000A07459 /* UpdateMatrail */,
 				F90123BC2CB1DD39009F14DE /* UploadVideoRequest.swift */,
 				F90123BE2CB1DD86009F14DE /* UploadVideoRequestFormData.swift */,
 				F9BC9F952CB32A60004D2D14 /* UploadVideoDTO.swift */,
@@ -3177,8 +3281,8 @@
 		F94C24492CBC37BE0005441C /* ActivationNewLearner */ = {
 			isa = PBXGroup;
 			children = (
-				F94C244C2CBC37E40005441C /* ActivationNewLearnerView.swift */,
-				F94C244A2CBC37DA0005441C /* ActivationNewLearnerViewModel.swift */,
+				C8AAEFAF2CCED3A500BE552E /* ActivationNewLearnerView.swift */,
+				C8AAEFB02CCED3A500BE552E /* ActivationNewLearnerViewModel.swift */,
 			);
 			path = ActivationNewLearner;
 			sourceTree = "<group>";
@@ -3325,6 +3429,7 @@
 		F98290E72CB00FB8004709CF /* LessonFolderDetails */ = {
 			isa = PBXGroup;
 			children = (
+				F82AF0242CC8ED4E00A07459 /* MaterialOptionType.swift */,
 				F98290EA2CB00FEC004709CF /* LessonFolderDetailsView.swift */,
 				F98290EC2CB00FF7004709CF /* LessonFolderDetailsViewModel.swift */,
 				F98290F42CB01A1D004709CF /* MaterialView.swift */,
@@ -3454,6 +3559,8 @@
 				F99A1F272C84D4630086ED84 /* DeleteGroupUseCase.swift */,
 				F98344422C96DB8A00C9E209 /* EditCourseTargetUseCase.swift */,
 				F90123C42CB1E6C0009F14DE /* UploadVideoUseCase.swift */,
+				F82AF02D2CC9119600A07459 /* EditMaterilUseCase.swift */,
+				F82AF0352CC91EBA00A07459 /* CopyMaterilUseCase.swift */,
 			);
 			path = CoursesUseCase;
 			sourceTree = "<group>";
@@ -4110,6 +4217,7 @@
 				C8ECA8722C7086F60053A4CD /* Register2.swift in Sources */,
 				C84F12FC2C3041CA0007A9C8 /* BillMonitorItemView.swift in Sources */,
 				C8ECA88F2C70870E0053A4CD /* ForgetPassword3Request.swift in Sources */,
+				F82AF0362CC91EBA00A07459 /* CopyMaterilUseCase.swift in Sources */,
 				C8ECA8A32C70870E0053A4CD /* Register3RequestDTO.swift in Sources */,
 				C8B258B52C6878D200A677ED /* EnrollmentContentFilter.swift in Sources */,
 				C8ECA8CD2C7088210053A4CD /* LoginView.swift in Sources */,
@@ -4134,12 +4242,14 @@
 				C8ECA8A52C70871B0053A4CD /* RegistrationMapper.swift in Sources */,
 				F81672AC2CC14DD6005624A8 /* CreateEnrollmentEBookUseCase.swift in Sources */,
 				F90123BA2CB1DB94009F14DE /* Video.swift in Sources */,
+				C8AAEFBE2CCEE26D00BE552E /* InvitationActionParameters.swift in Sources */,
 				C87BA1082C8C802400DA1B33 /* TeamPermissions.swift in Sources */,
 				C897B3532C88FFEB00DCB428 /* CollapsibleSection.swift in Sources */,
 				C82503E52C6D12280020DC3D /* SearchView.swift in Sources */,
 				C8B258A72C6615BF00A677ED /* EnrollmentOptions.swift in Sources */,
 				F9AD05F52C7530B200CC63B2 /* ChildrenFolderRequest.swift in Sources */,
 				C87DCD612C145DBC00F71D4E /* CustomNavigationBar.swift in Sources */,
+				F82AF02E2CC9119600A07459 /* EditMaterilUseCase.swift in Sources */,
 				C88796142C53FCB900286B39 /* TransactionsFilterViewModel.swift in Sources */,
 				C8ECA8E62C70884E0053A4CD /* CodeVerification.swift in Sources */,
 				C8ECA9352C708A970053A4CD /* ProfileRepository.swift in Sources */,
@@ -4169,6 +4279,7 @@
 				F9AD05D02C74CCDD00CC63B2 /* UpdateStatusStudentDTO.swift in Sources */,
 				F99F72932C6498CF00A2DEB2 /* CourseDetailsViewCoordinator.swift in Sources */,
 				C8ECA83C2C6F8AB70053A4CD /* CourseDTO.swift in Sources */,
+				C8AAEFAC2CCED14300BE552E /* InvitationMapper.swift in Sources */,
 				C828CFA12C3B99B4001075BB /* CheckoutView.swift in Sources */,
 				C8ECA8972C70870E0053A4CD /* LoginResponseDTO.swift in Sources */,
 				C89A776A2C5773D400970121 /* ScreenType.swift in Sources */,
@@ -4188,11 +4299,11 @@
 				F9AB67F32C704EAA00579C5D /* FolderMaterial.swift in Sources */,
 				F9AD05E82C752D1C00CC63B2 /* ChildrenFolder.swift in Sources */,
 				F9AD05DD2C751CA700CC63B2 /* DeleteFolderResponse.swift in Sources */,
+				F82AF0282CC90B6B00A07459 /* EditMatrailRequest.swift in Sources */,
 				C8ED33172C4C1CC200C5E7C3 /* EnrollmentDTO.swift in Sources */,
 				F99A1F1A2C831EDB0086ED84 /* CreateGroupUseCase.swift in Sources */,
 				F9A6C3922C68B3110055C713 /* CustomDialogModelConfigurator.swift in Sources */,
 				F81672A22CC14B79005624A8 /* EnrollmentQBankManualRequest.swift in Sources */,
-				F94C244D2CBC37E40005441C /* ActivationNewLearnerView.swift in Sources */,
 				F9AB67F12C704E8600579C5D /* Folder.swift in Sources */,
 				C84D21C22C3FD0D400DF2DD2 /* PaymentViewModel.swift in Sources */,
 				F98290ED2CB00FF7004709CF /* LessonFolderDetailsViewModel.swift in Sources */,
@@ -4205,6 +4316,7 @@
 				F9A0117D2C8C33FE004C57A3 /* EditQuestionView.swift in Sources */,
 				C8BA32FA2C14A2C900A9B3D3 /* MainTabBarController.swift in Sources */,
 				F93A19F72C79B56900799239 /* TimeInterval+DateComponentsUnit.swift in Sources */,
+				C8AAEFAA2CCED0E900BE552E /* InvitationDTO.swift in Sources */,
 				F978D02F2C6C9BF500E237CF /* CustomDailogTextFieldViewCoordinator.swift in Sources */,
 				F98344432C96DB8A00C9E209 /* EditCourseTargetUseCase.swift in Sources */,
 				F9A1AFF82C92D53D006857ED /* QBankSixthStepView.swift in Sources */,
@@ -4231,6 +4343,7 @@
 				C8BA32AD2C14A01F00A9B3D3 /* User.swift in Sources */,
 				F979A9752C75D56E0097209F /* GroupDTO.swift in Sources */,
 				F9D563032CA5B45700092EF6 /* UpdateQBankSettingUseCase.swift in Sources */,
+				F82AF0342CC91C5D00A07459 /* CopyMaterial.swift in Sources */,
 				C84F13122C34978A0007A9C8 /* Finance.swift in Sources */,
 				C8ECA8BD2C70875F0053A4CD /* ForgetPassword1UseCase.swift in Sources */,
 				C8B258CA2C69BB1100A677ED /* EnrollmentDetailsView.swift in Sources */,
@@ -4278,6 +4391,8 @@
 				C8ECA89F2C70870E0053A4CD /* Register4ResponseDTO.swift in Sources */,
 				F81672A62CC14C6A005624A8 /* EnrollmentEBookManualRequest.swift in Sources */,
 				C8ECA89E2C70870E0053A4CD /* ForgetPassword3RequestDTO.swift in Sources */,
+				F893BF382CCE61E100A660F8 /* UserDefaultsManager+Extenions.swift in Sources */,
+				F82AF0252CC8ED4E00A07459 /* MaterialOptionType.swift in Sources */,
 				F9F027412C67D12900CE541B /* EditCourseViewCoordinator.swift in Sources */,
 				F90123BF2CB1DD86009F14DE /* UploadVideoRequestFormData.swift in Sources */,
 				F9AB12222C69CA3A00F7A287 /* CourseSettingViewModel.swift in Sources */,
@@ -4331,6 +4446,7 @@
 				F93A19EE2C79B25600799239 /* FolderLevel.swift in Sources */,
 				C84F13222C34A58D0007A9C8 /* MonitorBillItemMapper.swift in Sources */,
 				C84F133F2C36D8000007A9C8 /* ViewController.swift in Sources */,
+				C8AAEFC22CCEE71000BE552E /* InvitationActionType.swift in Sources */,
 				C8D473742C9DC41400265626 /* MemberListRequest.swift in Sources */,
 				F9F235D32CB9774300BBE3A8 /* ActivationCell.swift in Sources */,
 				C8ECA95B2C708B320053A4CD /* MoreViewModel.swift in Sources */,
@@ -4374,6 +4490,7 @@
 				F99A1F142C831B850086ED84 /* CreateGroup.swift in Sources */,
 				F93EAB1A2C98CE3B00B3A056 /* PreviousExamDTO.swift in Sources */,
 				C84D21BA2C3E48A400DF2DD2 /* WebView.swift in Sources */,
+				C8AAEFB62CCEDEF800BE552E /* InvitationActionResponse.swift in Sources */,
 				F99A1F502C8611C60086ED84 /* QBankUseCase.swift in Sources */,
 				C828CEA32C38207F001075BB /* PopupSheetView.swift in Sources */,
 				C8ECA9452C708AFE0053A4CD /* LocationsList.swift in Sources */,
@@ -4394,6 +4511,7 @@
 				C8ED330D2C4B615E00C5E7C3 /* Secretary.swift in Sources */,
 				C87BA1032C8C359700DA1B33 /* InstructorOptions.swift in Sources */,
 				F98344322C95B49F00C9E209 /* Answer.swift in Sources */,
+				F82AF0302CC91BB700A07459 /* CopyMaterilRequest.swift in Sources */,
 				F99A1F382C8607210086ED84 /* QBankDTO.swift in Sources */,
 				F976CD602C7B44BA00DA7ACA /* FontWeight.swift in Sources */,
 				F94C24512CBC6C240005441C /* AcceptAllActivationRequest.swift in Sources */,
@@ -4412,6 +4530,7 @@
 				F98290F32CB019A5004709CF /* MaterialFolderListView.swift in Sources */,
 				C8ECA8142C6E2BF10053A4CD /* SearchResultCell.swift in Sources */,
 				C8ED33192C4C1D2E00C5E7C3 /* EnrollmentContentDTO.swift in Sources */,
+				F82AF02A2CC90BD100A07459 /* EditMatrailDTO.swift in Sources */,
 				C8B258D42C6A07DF00A677ED /* DeclineCourseRequest.swift in Sources */,
 				C8B258D22C6A073E00A677ED /* DeclineCourseDTO.swift in Sources */,
 				C8ECA89C2C70870E0053A4CD /* Register1ResponseDTO.swift in Sources */,
@@ -4452,6 +4571,7 @@
 				F9A1AFF62C92D4FC006857ED /* QBankFifthStepView.swift in Sources */,
 				F9AB68022C70551F00579C5D /* GetContentFilterRequestDTO.swift in Sources */,
 				F96F52322C9C35A600D24372 /* CreateCourseUseCase.swift in Sources */,
+				F82AF0322CC91C0600A07459 /* CopyMaterailDTO.swift in Sources */,
 				F979A9922C761B040097209F /* DeleteCourseResponse.swift in Sources */,
 				F96F520E2C99B94400D24372 /* AddCourseSteps.swift in Sources */,
 				F979A97B2C75D73E0097209F /* Owner.swift in Sources */,
@@ -4477,6 +4597,7 @@
 				C84F12F82C30376F0007A9C8 /* BillCardView.swift in Sources */,
 				F96F52272C9C2E0200D24372 /* TargetRequestFromData.swift in Sources */,
 				F99E98062C87975B002067CB /* TargetedLearnersType.swift in Sources */,
+				C8AAEFBA2CCEDFA100BE552E /* InvitationActionRequest.swift in Sources */,
 				C8BA32562C1494C500A9B3D3 /* View+CustomNavigationBarStyle.swift in Sources */,
 				C8D4736A2C9D5A2300265626 /* MemberOptions.swift in Sources */,
 				C8ECA8B62C70875F0053A4CD /* Register4UseCase.swift in Sources */,
@@ -4507,9 +4628,11 @@
 				C8D4738E2CA0685000265626 /* CreateTeamMapper.swift in Sources */,
 				C8ECA8AD2C7087560053A4CD /* IRegistrationRepository.swift in Sources */,
 				F9AD05CE2C74B13900CC63B2 /* View+CustomDialog.swift in Sources */,
+				C8AAEFBC2CCEE11900BE552E /* InvitationActionParametersDTO.swift in Sources */,
 				F91DC21E2C73B728009B9434 /* StudentDataUseCase.swift in Sources */,
 				C8ED331B2C4C1E0100C5E7C3 /* StudentDTO.swift in Sources */,
 				C8B258972C63476400A677ED /* EnrollmentView.swift in Sources */,
+				C8AAEFAE2CCED20C00BE552E /* InvitationRequest.swift in Sources */,
 				C8B258922C63462200A677ED /* EnrollmentCoordinator.swift in Sources */,
 				C8D473852CA0652700265626 /* DashboardAPI.swift in Sources */,
 				F98DBB132C7C666100FA4CD6 /* EditCourseSecurityUseCase.swift in Sources */,
@@ -4518,6 +4641,7 @@
 				C8ECA8A82C7087370053A4CD /* RegistrationDataSource.swift in Sources */,
 				C8ECA86B2C7086F60053A4CD /* Login.swift in Sources */,
 				F90123B82CB1DAC4009F14DE /* UploadVideo.swift in Sources */,
+				C8AAEFC02CCEE59200BE552E /* InvitationsActionUseCase.swift in Sources */,
 				F94C24552CBC6E860005441C /* AcceptAllActivationUseCase.swift in Sources */,
 				F96F52192C99CE2600D24372 /* CourseFifthStepView.swift in Sources */,
 				F94C24402CBBB5140005441C /* RejectActivationRequest.swift in Sources */,
@@ -4536,6 +4660,7 @@
 				C8ED33132C4C16DF00C5E7C3 /* GetExternalWalletRequest.swift in Sources */,
 				C8D473962CA06A5A00265626 /* TeamOwnerDTO.swift in Sources */,
 				F9AB68042C7055A700579C5D /* GetContentFilterRequest.swift in Sources */,
+				C8AAEFB12CCED3A600BE552E /* ActivationNewLearnerView.swift in Sources */,
 				F9AD05EA2C752D5E00CC63B2 /* Children.swift in Sources */,
 				F9F027432C67D3EE00CE541B /* ToggleView.swift in Sources */,
 				C8ECA84A2C6F9B8B0053A4CD /* GetCoursesResponseDTO.swift in Sources */,
@@ -4564,6 +4689,7 @@
 				F93EAB242C98D1A700B3A056 /* CreateQBankRequest.swift in Sources */,
 				F976CD5D2C7B40E100DA7ACA /* CustomPickerItems.swift in Sources */,
 				F9AB67F72C704F8A00579C5D /* FolderDTO.swift in Sources */,
+				C8AAEFB22CCED3A600BE552E /* ActivationNewLearnerViewModel.swift in Sources */,
 				C84F12FA2C3037F60007A9C8 /* ProgressBar.swift in Sources */,
 				C8ECA8B72C70875F0053A4CD /* Register3UseCase.swift in Sources */,
 				C8ECA8BB2C70875F0053A4CD /* ForgetPassword3UseCase.swift in Sources */,
@@ -4579,6 +4705,7 @@
 				C8D473C82CA6DD7000265626 /* MyTeamsMapper.swift in Sources */,
 				C8B258992C63CEB400A677ED /* DeleteTransactionRequestDTO.swift in Sources */,
 				F96F522E2C9C311100D24372 /* CreateCourseRequestFrom.swift in Sources */,
+				F82AF02C2CC90C4B00A07459 /* EditMatrial.swift in Sources */,
 				C84F13062C305BAA0007A9C8 /* BillDetailsView.swift in Sources */,
 				C8ECA9232C708A6F0053A4CD /* EditProfile.swift in Sources */,
 				F99A1F2E2C86057A0086ED84 /* QBank.swift in Sources */,
@@ -4608,9 +4735,11 @@
 				C87DCD632C145DE100F71D4E /* CustomNavigationBarStyle.swift in Sources */,
 				F96F52172C99CAF300D24372 /* CourseFourthStepView.swift in Sources */,
 				C84F13142C349CE60007A9C8 /* FinanceAPI.swift in Sources */,
+				C8AAEFA02CCEBE1F00BE552E /* TeamInvitationsView.swift in Sources */,
 				F83498912CC53C6E00914E78 /* EnrollmentCourseGroupDTO.swift in Sources */,
 				C8ECA8EE2C7088650053A4CD /* CompleteYourProfileViewModel.swift in Sources */,
 				C8ECA8A02C70870E0053A4CD /* LoginRequestDTO.swift in Sources */,
+				C8AAEFA22CCEBE7400BE552E /* TeamInvitationsViewModel.swift in Sources */,
 				F980919B2C63DB97006A0409 /* LibarayViewCoordinator.swift in Sources */,
 				F93EAB1E2C98CEB300B3A056 /* ReferenceSyllabusDTO.swift in Sources */,
 				F978D02D2C6C9BC300E237CF /* CustomDailogTextFieldViewModel.swift in Sources */,
@@ -4644,6 +4773,7 @@
 				C8B258A12C63D85000A677ED /* TransactionActionType.swift in Sources */,
 				C8B2589D2C63D35300A677ED /* TransactionDeleteConfirmModelDTO.swift in Sources */,
 				C8ECA96B2C708BBB0053A4CD /* MoreStrings.swift in Sources */,
+				C8AAEFA72CCED03A00BE552E /* Invitation.swift in Sources */,
 				C8ECA88E2C70870E0053A4CD /* ForgetPassword3ResponseDTO.swift in Sources */,
 				C8ECA8F92C7088820053A4CD /* ResetPasswordView.swift in Sources */,
 				C8ECA9222C708A6F0053A4CD /* ProfileData.swift in Sources */,
@@ -4677,6 +4807,7 @@
 				C8B258CE2C69BB9100A677ED /* EnrollmentDetailsCoordintor.swift in Sources */,
 				C8BC56B72C6C905800B37916 /* PostDeclineCourseRequestDTO.swift in Sources */,
 				C8B258B02C6876EC00A677ED /* GetEnrollmentRequestDTO.swift in Sources */,
+				C8AAEFA42CCEC01200BE552E /* TeamInvitationsCoordinator.swift in Sources */,
 				C828CFA32C3B99D2001075BB /* CheckoutViewModel.swift in Sources */,
 				C8ECA9482C708B0A0053A4CD /* EditProfileView.swift in Sources */,
 				C8ECA94C2C708B140053A4CD /* EducationStatusesList.swift in Sources */,
@@ -4713,12 +4844,12 @@
 				F979A9712C75D2E70097209F /* EditCourseSettingRequest.swift in Sources */,
 				C8BA33072C14AA2200A9B3D3 /* SplashView.swift in Sources */,
 				C8B258BC2C687CEB00A677ED /* EnrollmentResponseDTO.swift in Sources */,
-				F94C244B2CBC37DA0005441C /* ActivationNewLearnerViewModel.swift in Sources */,
 				C8ECA8922C70870E0053A4CD /* Register2Request.swift in Sources */,
 				C8ECA9642C708B8A0053A4CD /* EditProfileCoordinator.swift in Sources */,
 				C8ECA8732C7086F60053A4CD /* RegistrationMethod.swift in Sources */,
 				C8D473822CA064DF00265626 /* DashboardRepository.swift in Sources */,
 				C8ED33102C4B650100C5E7C3 /* GetExternallWalletResponseDTO.swift in Sources */,
+				C8AAEFB42CCED5B800BE552E /* InvitationsUseCase.swift in Sources */,
 				C8B258B22C68778300A677ED /* GetEnrollmentCoursesRequest.swift in Sources */,
 				C8ECA9672C708BB20053A4CD /* RegistrationStrings.swift in Sources */,
 				C8ECA86D2C7086F60053A4CD /* ForgetPassword2.swift in Sources */,
@@ -4760,6 +4891,7 @@
 				F9AB67F52C704ECE00579C5D /* Materialable.swift in Sources */,
 				F9A73C902C737DB300367546 /* UpdateEnrollmentStudentDTO.swift in Sources */,
 				C84D21B02C3E37EC00DF2DD2 /* BillsPaymentMapper.swift in Sources */,
+				C8AAEFB82CCEDF3500BE552E /* InvitationActionResponseDTO.swift in Sources */,
 				C8ECA8E52C70884E0053A4CD /* VerifyViewModel.swift in Sources */,
 				F93A19FF2C79D05A00799239 /* FoldersListView.swift in Sources */,
 				F88B65492CBD2DFF002F92A4 /* SearchStaffDTO.swift in Sources */,
@@ -4925,7 +5057,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = YRTDZM895L;
+				DEVELOPMENT_TEAM = 6F6BTWQDSG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EMLE Teams/Core/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "EMLE Educators";
@@ -4961,7 +5093,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = YRTDZM895L;
+				DEVELOPMENT_TEAM = 6F6BTWQDSG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "EMLE Teams/Core/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "EMLE Educators";

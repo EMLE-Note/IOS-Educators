@@ -36,6 +36,8 @@ class MyLibraryDependancyManager {
         @Provide var getGroupUseCase = GetGroupUseCase(repository: LibraryRepository)
         @Provide var deleteGroupUseCase = DeleteGroupUseCase(repository: LibraryRepository)
         @Provide var uploadVideoUseCase = UploadVideoUseCase(repository: LibraryRepository)
+        @Provide var editMaterilUseCase = EditMaterilUseCase(repository: LibraryRepository)
+        @Provide var copyMaterilUseCase = CopyMaterilUseCase(repository: LibraryRepository)
 
     }
     

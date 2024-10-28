@@ -28,4 +28,29 @@ enum MoreStrings: String, Localizable {
     case country = "country"
     
     case areYouSureYouWantToLogout = "are_you_sure_you_want_to_logout"
+    
+    case teamInvitation = "team_invitation"
+    case activation
+    case approveAll
+    case activateNewLearner
+    case activaionRequest
+    case youDonotHaveAnyRequest
+    case whenLearnersSendActivityRequest
+    case registrationId
+    case mobileNumber
+    case name
+    case MaterialType
+    case materialName
+    case paidAmount
+    case decline
+    case approve
+    case selectCourseActivation
+    case selectAll
+    case select
+    case notFoundUser
+    case useSpecialPrice
+    case enterSpecialPrice
+    case ressons
+    case cancel
+
 }

@@ -57,12 +57,12 @@ struct ActivationNewLearnerView: View {
                 Text(viewModel.selectedGroupName ?? "")
                     .customStyle(.headline, .onSurface)
                 
-                Text("Select the courses that you want to activate!")
+                Text(MoreStrings.selectCourseActivation.localized)
                     .customStyle(.bodyMedium, .onSurface)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 HStack {
-                    Text("Select All")
+                    Text(MoreStrings.selectAll.localized)
                         .customStyle(.bodySmall, .onSurface)
                     
                     Spacer()
@@ -84,7 +84,7 @@ struct ActivationNewLearnerView: View {
                     }
                 }
 
-                PrimaryButton(title: "Select", action: {
+                PrimaryButton(title: MoreStrings.select.localized, action: {
                     viewModel.selectedCourseTapped()
                 })
                 .disabled(viewModel.selectedCourses.isEmpty && !viewModel.isAllCoursesSelected)
@@ -117,7 +117,7 @@ extension ActivationNewLearnerView {
     private var addNewStudentView: some View {
         VStack(alignment: .leading, spacing: .md) {
             
-            Text("Activate New Learner")
+            Text(MoreStrings.activateNewLearner.localized)
                 .customStyle(.headline, .onSurface)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.vertical, .xSm)
@@ -135,18 +135,20 @@ extension ActivationNewLearnerView {
                             .padding(.xSm)
                     }
                     
-                    Text(viewModel.searchData?.name ?? "Not Found User")
+                    Text(viewModel.searchData?.name ?? MoreStrings.notFoundUser.localized)
                         .customStyle(.bodySmall, .onSurface)
                         .padding(.leading, 8)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(height: 60)
                 .background(Color.clear)
                 .withCardBorder(backgroundColor: .onPrimary, bordered: viewModel.isBorder, borderColor: .neutral)
                 .withCardShadow(backgroundColor: .onSurface, cornerRadius: .sm)
+                .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                 .onTapGesture {
-                    if viewModel.searchData?.name != "Not Found User" {
+                    if viewModel.searchData?.name != MoreStrings.notFoundUser.localized {
                         viewModel.toggleBorder()
                         viewModel.phoneNumberVisible = !viewModel.isBorder
                     }
@@ -200,19 +202,14 @@ extension ActivationNewLearnerView {
                              value: $viewModel.phoneNumber,
                              selectedCountry: $viewModel.selectedCountry,
                              selectedAction: viewModel.countryCodeClick)
-            .keyboardType(.phonePad)
-            .textContentType(.telephoneNumber)
             .focused($focusedField, equals: .phoneNumber)
+            .submitLabel(.search)
             .onTapGesture {
                 focusedField = .phoneNumber
+                viewModel.searchTapped()
             }
-            .toolbar {
-                ToolbarItem(placement: .keyboard) {
-                    Button("Search") {
-                        viewModel.searchTapped()
-                        focusedField = nil
-                    }
-                }
+            .onSubmit {
+                viewModel.searchTapped()
             }
     }
 }
@@ -220,22 +217,22 @@ extension ActivationNewLearnerView {
 extension ActivationNewLearnerView {
     private var coursePrice: some View {
         VStack {
-            ToggleView(isOn: $viewModel.isUseSpecialToggle, title: "Use special price course")
+            ToggleView(isOn: $viewModel.isUseSpecialToggle, title: MoreStrings.useSpecialPrice.localized)
             
             if viewModel.isUseSpecialToggle {
                 CustomTextField(title: nil,
-                                placeholder: "Enter the special price",
+                                placeholder: MoreStrings.enterSpecialPrice.localized,
                                 value: $viewModel.specialPrice,
                                 borderStateColor: .neutral)
                 
                 CustomTextField(title: nil,
-                                placeholder: "Reasons (Optional)",
+                                placeholder: MoreStrings.ressons.localized,
                                 value: $viewModel.reasons,
                                 borderStateColor: .neutral)
             }
             
             CustomTextField(title: nil,
-                            placeholder: "paid amount",
+                            placeholder: MoreStrings.paidAmount.localized,
                             value: $viewModel.priceAmount,
                             borderStateColor: .neutral)
         }
@@ -245,11 +242,11 @@ extension ActivationNewLearnerView {
 extension ActivationNewLearnerView {
     private var buttonView: some View {
         HStack {
-            OutlinedButton(title: "Cancel", action: {
+            OutlinedButton(title: MoreStrings.cancel.localized, action: {
                 viewModel.cancelTapped()
             }, cornerRadius: 24)
             
-            PrimaryButton(title: "Activate", action: {
+            PrimaryButton(title: MoreStrings.activation.localized, action: {
                 viewModel.activateTapped()
             })
             .disabled(!viewModel.isActivateButtonEnabled)

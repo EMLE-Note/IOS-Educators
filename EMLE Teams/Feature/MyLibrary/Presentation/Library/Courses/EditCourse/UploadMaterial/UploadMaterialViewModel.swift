@@ -83,9 +83,9 @@ extension UploadMaterialViewModel {
 extension UploadMaterialViewModel {
     func uploadVideo() {
         do {
-            let video = Video(duration: 12, size: 12, serverId: 1, uploadType: uploadType, link: link)
+            let video = Video(duration: 0, size: 0, serverId: 1, uploadType: uploadType, link: link)
             
-            let params = UploadVideo(name: videoName, isVisible: true, shouldPass: false, isFree: true, courseFolderId: folderId, file: nil, video: video)
+            let params = UploadVideo(name: videoName, isVisible: true, shouldPass: false, isFree: false, courseFolderId: folderId, file: nil, video: video)
             
             try uploadVideoUseCase.execute(params: params)
                 .sink(receiveCompletion: handleSecretriesCompletion,

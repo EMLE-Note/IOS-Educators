@@ -21,12 +21,14 @@ struct OptionView: View {
                     .scaledToFit()
                     .frame(width: 32, height: 32)
 
-                VStack(alignment: .leading) {
+                VStack(alignment: description.isEmpty ? .center : .leading) {
                     Text(title)
                         .customStyle(.bodyMedium, .onSurface)
-
-                    Text(description)
-                        .customStyle(.bodySmall, .subtitle)
+                    
+                    if !description.isEmpty {
+                        Text(description)
+                            .customStyle(.bodySmall, .subtitle)
+                    }
                 }
             }
         }

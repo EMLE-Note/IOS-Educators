@@ -22,6 +22,9 @@ protocol IProfileAPI: APIProtocol {
     func createEnrollmentQBank(request: EnrollmentQBankManualRequest) throws -> APIDataPublisher
     func createEnrollmentEBook(request: EnrollmentEBookManualRequest) throws -> APIDataPublisher
     func createEnrollmentMassCourse(request: EnrollmentCourseGroupManualRequest) throws -> APIDataPublisher
+    func getInvitationsList(request: InvitationListRequest) throws -> APIDataPublisher
+    func invitationAction(invitationID: Int,params:InvitationActionParameters) throws -> APIDataPublisher
+
 }
 
 class ProfileAPI: IProfileAPI {
@@ -85,4 +88,14 @@ class ProfileAPI: IProfileAPI {
     func createEnrollmentMassCourse(request: EnrollmentCourseGroupManualRequest) throws -> APIDataPublisher {
         try sendTeamAuthorizedAPICall(request: request)
     }
+    
+    func getInvitationsList(request: InvitationListRequest) throws -> EMLECore.APIDataPublisher {
+        try sendTeamAuthorizedAPICall(request: request)
+    }
+    
+    func invitationAction(invitationID: Int,params:InvitationActionParameters) throws -> EMLECore.APIDataPublisher {
+        let request = InvitationActionRequest(invitationID: invitationID, params: params.toRequest())
+        return try sendTeamAuthorizedAPICall(request: request)
+    }
+    
 }

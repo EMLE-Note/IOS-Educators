@@ -218,6 +218,17 @@ enum LibraryStrings: String, Localizable  {
     case pasteVideoLink
     case upload
     
+    case downloadMaterial
+    case editMaterial
+    case hideLesson
+    case copyLesson
+    case setasFree
+    case deleteLesson
+    case hidenTheLessonCourse
+    case copyTheLessonAntherCourse
+    case encouageLearners
+    case deleteYouLessonFile
+    
     case DQuiz = "%d quiz"
     case DBook = "%d Book"
 }

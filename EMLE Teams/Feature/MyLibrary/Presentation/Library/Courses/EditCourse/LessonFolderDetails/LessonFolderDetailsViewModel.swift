@@ -24,14 +24,17 @@ class LessonFolderDetailsViewModel: MainViewModel {
     var isTabBarVisible: Bool { false }
     var selectedFolderId: Int? = nil
     var cancellables = Set<AnyCancellable>()
+    let defaultsManager = UserDefaultsManage()
     
     @Published var isOptianFolderViewPresented = false
     @Published var folderMaterial: [FolderMaterial] = []
     @Published var folder: Folder = .placeholder
     @Published var childernLoadingState: LoadingState = .loaded
-    @Published var contentOptions: [OptionType] = []
+    @Published var contentOptions: [MaterialOptionType] = []
     
     @Inject var childernFolderUseCase: ChildernFolderUseCase
+    @Inject var editMaterilUseCase: EditMaterilUseCase
+    @Inject var copyMaterilUseCase: CopyMaterilUseCase
 }
 
 extension LessonFolderDetailsViewModel {
@@ -43,14 +46,19 @@ extension LessonFolderDetailsViewModel {
         coordinator.goToEditParentFolder(folderId: folderId)
     }
     
-    func onClickedOptianContent(folder: FolderMaterial) {
+    func onClickedOptianContent(materil: FolderMaterial) {
         withOptionalAnimation {
             isOptianFolderViewPresented = true
         }
         selectedFolderId = folderId
+        
         contentOptions = [
-            .hideFolder(folderId: folderId, isVisible: true),
-            .deletePermanently(folderId: folderId)
+            .downloadMaterial,
+            .editMaterial,
+            .hideLesson,
+            .copyLesson(materilId: materil.materialId),
+            .setFreeMaterial(materilId: materil.materialId, isFree: materil.isFree),
+            .deleteLesson
         ]
     }
     
@@ -68,14 +76,41 @@ extension LessonFolderDetailsViewModel {
 }
 
 extension LessonFolderDetailsViewModel {
-    func handleAction(for option: OptionType) {
+    func handleAction(for option: MaterialOptionType) {
         switch option {
-        case .hideFolder(let folderId, let isVisible):
+        case .downloadMaterial: return
+        case .editMaterial: return
+        case .hideLesson: return
+        case .copyLesson(materilId: let materilId):
+            copyLesson(materilId: materilId)
+        case .setFreeMaterial(materilId: let materilId, isFree: let isFree):
+            toggleFreeMateril(materilId: materilId, isFree: isFree)
+        case .deleteLesson:
             return
-        case .deletePermanently(let folderId):
-            return
-        case .editSecurity: return
-        case .toggleActivation: return
+        }
+    }
+    
+    private func toggleFreeMateril(materilId: Int, isFree: Bool) {
+        withOptionalAnimation {
+            isOptianFolderViewPresented = false
+        }
+        editMaterialFree(materialId: materilId, isFree: isFree ? 0 : 1)
+    }
+    
+    private func copyLesson(materilId: Int) {
+        withOptionalAnimation {
+            isOptianFolderViewPresented = false
+        }
+        
+        defaultsManager.setMaterialId(materilId)
+        
+        showSuccessToast(message: "Copied")
+    }
+    
+    func pastedMaterialTapped() {
+        if let materialId = defaultsManager.getMaterialId() {
+            copyMaterial(materialId: materialId, persist: 1)
+            defaultsManager.removeMaterialId()
         }
     }
 }
@@ -122,5 +157,52 @@ extension LessonFolderDetailsViewModel {
         
         self.folder = folderData
         self.folderMaterial = folderData.materials
+    }
+}
+
+// MARK: - Edit Materil -
+
+extension LessonFolderDetailsViewModel {
+    private func editMaterialFree(materialId: Int, isFree: Int) {
+        do {
+            childernLoadingState = .loading
+            let params: EditMatrail = EditMatrail(materilId: materialId, isFree: isFree)
+            
+            try editMaterilUseCase.execute(params: params)
+                .sink(receiveCompletion: handleSecretriesCompletion,
+                      receiveValue: handleMaterilResponse)
+                .store(in: &cancellables)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func handleMaterilResponse(matrial: DomainWrapper<FolderMaterial>) {
+        childernLoadingState = .loaded
+        
+        guard matrial.isSuccess else {
+            let errorMessage = matrial.message
+            showErrorToast(message: errorMessage)
+            return
+        }
+        
+        showSuccessToast(message: matrial.message)
+        fetchMaterialFolder(folderId: folderId)
+    }
+}
+
+extension LessonFolderDetailsViewModel {
+    private func copyMaterial(materialId: Int, persist: Int) {
+        do {
+            childernLoadingState = .loading
+            let params: CopyMaterial = CopyMaterial(materilId: materialId, courseFolderId: folder.folderId, persist: persist)
+            
+            try copyMaterilUseCase.execute(params: params)
+                .sink(receiveCompletion: handleSecretriesCompletion,
+                      receiveValue: handleMaterilResponse)
+                .store(in: &cancellables)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

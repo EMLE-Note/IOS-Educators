@@ -18,6 +18,8 @@ typealias AcceptActivationPublisher = DomainPublisher<AcceptActivationResponse>
 typealias RejectActivationPublisher = DomainPublisher<RejectActivationResponse>
 typealias SearchStaffPublisher = DomainPublisher<SearchStaffResponse>
 typealias EnrollmentManualPublisher = DomainPublisher<EnrollmentManualResponse>
+typealias InvitationListPublisher = DomainPublisher<[Invitation]>
+typealias InvitationActionPublisher = DomainPublisher<InvitationActionResponse>
 
 class ProfileRepository: IProfileRepository {
     
@@ -118,6 +120,20 @@ class ProfileRepository: IProfileRepository {
     func createEnrollmentMassCourse(parms: EnrollmentCourseParameter) throws -> EnrollmentManualPublisher {
         try dataSource.createEnrollmentMassCourse(params: parms)
             .tryMap {  $0.toDomainWrapper(with: nil) }
+            .mapError()
+            .eraseToAnyPublisher()
+    }
+    
+    func getInvitationsListData() throws -> InvitationListPublisher {
+        try dataSource.getInvitationList()
+            .tryMap { $0.toDomainWrapper(with: $0.data?.toDomain()) }
+            .mapError()
+            .eraseToAnyPublisher()
+    }
+    
+    func invitationAction(invitationID: Int, params: InvitationActionParameters) throws -> InvitationActionPublisher {
+        try dataSource.invitationAction(invitationID: invitationID, params: params)
+            .tryMap { $0.toDomainWrapper(with: nil) }
             .mapError()
             .eraseToAnyPublisher()
     }
