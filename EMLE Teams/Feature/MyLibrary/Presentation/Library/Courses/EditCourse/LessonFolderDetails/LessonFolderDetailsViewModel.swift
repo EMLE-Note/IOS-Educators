@@ -12,7 +12,7 @@ import SwiftUI
 
 typealias FoldersMaterialDelegate = GenericAction<FolderMaterial>
 
-class LessonFolderDetailsViewModel: MainViewModel {
+class LessonFolderDetailsViewModel: NSObject, MainViewModel {
     
     let coordinator: LessonFolderDetailsCoordinating
     init(folderId: Int, coordinator: LessonFolderDetailsCoordinating) {
@@ -53,7 +53,7 @@ extension LessonFolderDetailsViewModel {
         selectedFolderId = folderId
         
         contentOptions = [
-            .downloadMaterial,
+            .downloadMaterial(materialLink: materil.link),
             .editMaterial,
             .hideLesson,
             .copyLesson(materilId: materil.materialId),
@@ -78,7 +78,8 @@ extension LessonFolderDetailsViewModel {
 extension LessonFolderDetailsViewModel {
     func handleAction(for option: MaterialOptionType) {
         switch option {
-        case .downloadMaterial: return
+        case .downloadMaterial(materialLink: let materialLink):
+            downloadMaterial(materialLink: materialLink)
         case .editMaterial: return
         case .hideLesson: return
         case .copyLesson(materilId: let materilId):
@@ -88,6 +89,47 @@ extension LessonFolderDetailsViewModel {
         case .deleteLesson:
             return
         }
+    }
+    
+    private func downloadMaterial(materialLink: String) {
+        withOptionalAnimation {
+            isOptianFolderViewPresented = false
+        }
+        
+        guard let url = URL(string: materialLink) else {
+            showErrorToast(message: "Invalid material link")
+            return
+        }
+        
+        startDownloadTask(with: url)
+        
+    }
+    
+    private func startDownloadTask(with url: URL) {
+        // Set up background URL session configuration
+        let config = URLSessionConfiguration.background(withIdentifier: "com.yourapp.backgroundDownload")
+        config.timeoutIntervalForRequest = 30
+        config.timeoutIntervalForResource = 60
+        config.allowsCellularAccess = true
+        config.httpShouldUsePipelining = true
+        
+        // Create the background session and initiate the download task
+        let backgroundSession = URLSession(configuration: config, delegate: self, delegateQueue: nil)
+        
+        // Create download task
+        let downloadTask = backgroundSession.downloadTask(with: url)
+        
+        // Start the download task
+        downloadTask.resume()
+    }
+    
+    // Utility function to define where the downloaded file will be saved
+    private func getDestinationURL(for downloadTask: URLSessionDownloadTask) -> URL {
+        let fileManager = FileManager.default
+        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        // You can also use `downloadTask.response?.suggestedFilename` if you want to name the file
+        return documentsDirectory.appendingPathComponent(downloadTask.response?.suggestedFilename ?? "downloadedMaterial")
     }
     
     private func toggleFreeMateril(materilId: Int, isFree: Bool) {
@@ -205,4 +247,50 @@ extension LessonFolderDetailsViewModel {
             print(error.localizedDescription)
         }
     }
+}
+
+import Foundation
+
+extension LessonFolderDetailsViewModel: URLSessionDownloadDelegate {
+    // Called when the download finishes
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("Download finished to: \(location.path)")
+
+        let destinationURL = getDestinationURL(for: downloadTask)
+
+        do {
+            // Ensure the destination doesn't already contain the file
+            if FileManager.default.fileExists(atPath: destinationURL.path) {
+                try FileManager.default.removeItem(at: destinationURL)
+            }
+            
+            // Move the file to the destination
+            try FileManager.default.moveItem(at: location, to: destinationURL)
+            
+            DispatchQueue.main.async {
+                showSuccessToast(message: "The download has completed successfully.")
+            }
+        } catch {
+            DispatchQueue.main.async {
+                showErrorToast(message: "File move error: \(error.localizedDescription)")
+            }
+        }
+    }
+
+    // Called when there's an error with the download task
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFailWithError error: Error) {
+        // Notify the user that the download failed
+        DispatchQueue.main.async {
+            showErrorToast(message: error.localizedDescription)
+        }
+    }
+
+    // Called when all background session tasks are finished
+    func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+        // Handle session completion or any final tasks
+        DispatchQueue.main.async {
+            showErrorToast(message: "events finished")
+        }
+    }
+    
 }

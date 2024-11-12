@@ -39,6 +39,7 @@ struct DependencyManager: DependencyManagerProtocol {
     
     func initializeOtherDependencies() {
         @Provide var teamId = TeamId(id: 17)
+        @Provide var token = Token(token: "1085|4yWj4TA4gWjYRey43ICEaLRP1fDcVaXaAsrfrPP3588a679c")
         
     }
 }

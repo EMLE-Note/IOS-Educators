@@ -39,7 +39,7 @@ extension User {
     
     static var dummy: User = {
         
-        let token = Token(token: "1036|C75I95SlrvkFlJlwG5nLxzJNYKooWL6iHH7Qk24ta951baf1")
+        let token = Token(token: "1085|4yWj4TA4gWjYRey43ICEaLRP1fDcVaXaAsrfrPP3588a679c")
         
         return User(id: 6,
                     token: token,

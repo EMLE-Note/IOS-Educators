@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 enum MaterialOptionType: Hashable {
-    case downloadMaterial
+    case downloadMaterial(materialLink: String)
     case editMaterial
     case hideLesson
     case copyLesson(materilId: Int)

@@ -286,7 +286,7 @@ extension [EnrollmentStudentDTO] {
 
 extension EnrollmentStudentDTO {
     func toDomain() -> EnrollmentStudent {
-        EnrollmentStudent(enrollmentId: id, security: security.toDomain(), status: status, expireAt: expire_at, student: student.toDomain(), location: location, createdAt: created_at)
+        EnrollmentStudent(enrollmentId: id, security: security?.toDomain() ?? .placeholder, status: status, expireAt: expire_at, student: student.toDomain(), location: location, createdAt: created_at)
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Enrollment
 class EnrollmentStudentDTO: Codable {
     let id: Int
-    let security: SecurityDTO
+    let security: SecurityDTO?
     let status: Int
     let expire_at: String?
     let student: StudentDTO
